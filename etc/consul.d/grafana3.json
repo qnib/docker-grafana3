@@ -1,0 +1,14 @@
+{
+  "services": [
+    {
+        "id": "grafana3",
+        "name": "grafana3",
+        "tags": ["http"],
+        "port": 3000,
+        "checks": [{
+            "script": "supervisorctl status|egrep 'grafana3.*RUNNING' || supervisorctl status grafana",
+            "interval": "10s"
+        }]
+    }
+  ]
+}
