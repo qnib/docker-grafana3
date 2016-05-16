@@ -1,7 +1,7 @@
 {
-  "id": null,
-  "title": "DockerStats",
-  "originalTitle": "New dashboard",
+  "id": 2,
+  "title": "DockerStats Dash",
+  "originalTitle": "DockerStats Dash",
   "tags": [],
   "style": "dark",
   "timezone": "browser",
@@ -10,130 +10,119 @@
   "sharedCrosshair": false,
   "rows": [
     {
+      "collapse": false,
+      "editable": true,
       "height": "250px",
       "panels": [
         {
-          "title": "CPU Usage",
-          "error": false,
-          "span": 12,
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "fullerite",
           "editable": true,
-          "type": "graph",
-          "isNew": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
           "id": 1,
+          "isNew": true,
+          "legend": {
+            "alignAsTable": false,
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
           "targets": [
             {
-              "policy": "default",
+              "alias": "$tag_container_name",
               "dsType": "influxdb",
-              "resultFormat": "time_series",
-              "tags": [],
               "groupBy": [
                 {
-                  "type": "time",
                   "params": [
                     "$interval"
-                  ]
+                  ],
+                  "type": "time"
                 },
                 {
-                  "type": "tag",
                   "params": [
                     "container_name"
-                  ]
-                },
-                {
-                  "type": "tag",
-                  "params": [
-                    "host"
-                  ]
-                },
-                {
-                  "type": "fill",
-                  "params": [
-                    "null"
-                  ]
+                  ],
+                  "type": "tag"
                 }
               ],
+              "measurement": "DockerCpuPercentage",
+              "policy": "default",
+              "refId": "B",
+              "resultFormat": "time_series",
               "select": [
                 [
                   {
-                    "type": "field",
                     "params": [
                       "value"
-                    ]
+                    ],
+                    "type": "field"
                   },
                   {
-                    "type": "mean",
-                    "params": []
+                    "params": [],
+                    "type": "mean"
                   }
                 ]
               ],
-              "refId": "A",
-              "measurement": "DockerCpuPercentage",
-              "alias": "$tag_container_name ($tag_host)"
+              "tags": []
             }
           ],
-          "datasource": "influxdb",
-          "renderer": "flot",
-          "yaxes": [
-            {
-              "label": null,
-              "show": true,
-              "logBase": 1,
-              "min": 0,
-              "max": null,
-              "format": "percent"
-            },
-            {
-              "label": null,
-              "show": true,
-              "logBase": 1,
-              "min": null,
-              "max": null,
-              "format": "short"
-            }
-          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "CPU Usage",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
           "xaxis": {
             "show": true
           },
-          "grid": {
-            "threshold1": null,
-            "threshold2": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "lines": true,
-          "fill": 1,
-          "linewidth": 2,
-          "points": false,
-          "pointradius": 5,
-          "bars": false,
-          "stack": true,
-          "percentage": false,
-          "legend": {
-            "show": true,
-            "values": false,
-            "min": false,
-            "max": false,
-            "current": false,
-            "total": false,
-            "avg": false
-          },
-          "nullPointMode": "connected",
-          "steppedLine": true,
-          "tooltip": {
-            "value_type": "individual",
-            "shared": true,
-            "msResolution": false
-          },
-          "timeFrom": null,
-          "timeShift": null,
-          "aliasColors": {},
-          "seriesOverrides": [],
-          "links": []
+          "yaxes": [
+            {
+              "format": "percent",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": 0,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
         }
       ],
-      "title": "Row",
-      "collapse": false,
-      "editable": true
+      "title": "Row"
     },
     {
       "title": "New row",
@@ -142,142 +131,120 @@
       "collapse": false,
       "panels": [
         {
-          "title": "Memory Usage",
-          "error": false,
-          "span": 12,
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "fullerite",
           "editable": true,
-          "type": "graph",
-          "isNew": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
           "id": 2,
+          "isNew": true,
+          "legend": {
+            "alignAsTable": false,
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
           "targets": [
             {
-              "policy": "default",
+              "alias": "$tag_container_name",
               "dsType": "influxdb",
-              "resultFormat": "time_series",
-              "tags": [],
               "groupBy": [
                 {
-                  "type": "time",
                   "params": [
                     "$interval"
-                  ]
+                  ],
+                  "type": "time"
                 },
                 {
-                  "type": "tag",
                   "params": [
                     "container_name"
-                  ]
-                },
-                {
-                  "type": "tag",
-                  "params": [
-                    "host"
-                  ]
-                },
-                {
-                  "type": "fill",
-                  "params": [
-                    "null"
-                  ]
+                  ],
+                  "type": "tag"
                 }
               ],
+              "measurement": "DockerMemoryUsed",
+              "policy": "default",
+              "refId": "B",
+              "resultFormat": "time_series",
               "select": [
                 [
                   {
-                    "type": "field",
                     "params": [
                       "value"
-                    ]
+                    ],
+                    "type": "field"
                   },
                   {
-                    "type": "mean",
-                    "params": []
+                    "params": [],
+                    "type": "mean"
                   }
                 ]
               ],
-              "refId": "A",
-              "measurement": "DockerMemoryUsed",
-              "alias": "$tag_container_name ($tag_host)"
+              "tags": []
             }
           ],
-          "datasource": "influxdb",
-          "renderer": "flot",
-          "yaxes": [
-            {
-              "label": null,
-              "show": true,
-              "logBase": 1,
-              "min": 0,
-              "max": null,
-              "format": "bytes"
-            },
-            {
-              "label": null,
-              "show": true,
-              "logBase": 1,
-              "min": null,
-              "max": null,
-              "format": "short"
-            }
-          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Memory Usage",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
           "xaxis": {
             "show": true
           },
-          "grid": {
-            "threshold1": null,
-            "threshold2": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "lines": true,
-          "fill": 1,
-          "linewidth": 2,
-          "points": false,
-          "pointradius": 5,
-          "bars": false,
-          "stack": true,
-          "percentage": false,
-          "legend": {
-            "show": true,
-            "values": false,
-            "min": false,
-            "max": false,
-            "current": false,
-            "total": false,
-            "avg": false
-          },
-          "nullPointMode": "connected",
-          "steppedLine": true,
-          "tooltip": {
-            "value_type": "individual",
-            "shared": true,
-            "msResolution": false
-          },
-          "timeFrom": null,
-          "timeShift": null,
-          "aliasColors": {},
-          "seriesOverrides": [],
-          "links": []
+          "yaxes": [
+            {
+              "format": "bytes",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": 0,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
         }
       ]
     }
   ],
   "time": {
-    "from": "now-1h",
+    "from": "now-15m",
     "to": "now"
   },
   "timepicker": {
-    "time_options": [
-      "5m",
-      "15m",
-      "1h",
-      "6h",
-      "12h",
-      "24h",
-      "2d",
-      "7d",
-      "30d"
-    ],
     "refresh_intervals": [
       "5s",
       "10s",
@@ -289,6 +256,17 @@
       "1h",
       "2h",
       "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
     ]
   },
   "templating": {
@@ -297,7 +275,8 @@
   "annotations": {
     "list": []
   },
+  "refresh": false,
   "schemaVersion": 12,
-  "version": 0,
+  "version": 1,
   "links": []
 }
