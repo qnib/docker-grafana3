@@ -2,7 +2,7 @@
 FROM qnib/syslog
 
 ADD etc/yum.repos.d/grafana.repo /etc/yum.repos.d/
-RUN echo "2015-12-09.1" \ 
+RUN echo "2016-06-14.1" \ 
  && dnf clean all \
  && dnf install -y grafana \
  && mkdir -p /opt/qnib/grafana3/dashboards/
