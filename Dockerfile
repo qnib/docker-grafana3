@@ -1,6 +1,7 @@
 ###### QNIBTerminal Image
 FROM qnib/syslog
 
+ENV DS_QCOLLECT=qcollect
 ADD etc/yum.repos.d/grafana.repo /etc/yum.repos.d/
 RUN echo "2016-06-14.1" \ 
  && dnf clean all \
