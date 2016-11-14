@@ -13,4 +13,5 @@ ADD var/lib/grafana/grafana.db /var/lib/grafana/
 ADD etc/consul.d/grafana3.json /etc/consul.d/
 ADD opt/qnib/grafana3/bin/start.sh /opt/qnib/grafana3/bin/
 ADD opt/qnib/grafana3/dashboards/docker-stats.json \
+    opt/qnib/grafana3/dashboards/prometheus.json \
     /opt/qnib/grafana3/dashboards/
